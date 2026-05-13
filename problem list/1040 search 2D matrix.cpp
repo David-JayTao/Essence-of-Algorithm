@@ -21,14 +21,14 @@ int main()
         //     break;
         // };
     int nums;
-    cin>>nums;
+    scanf("%d",&nums);
     while(nums--)
     {
         int m,n,target;
         cin>>m>>n>>target;
         for(int i=1;i<=m;i++)
             for(int j=1;j<=n;j++)
-                cin>>a[i][j];
+                scanf("%d",a[i][j]);
         bool flag=false;
         int i=1,j=n;
         while(i>=1&&i<=m&&j>=1&&j<=n)
@@ -43,8 +43,8 @@ int main()
                 break;
             };
         }
-        if(flag)cout<<"true"<<endl;
-        else cout<<"false"<<endl;
+        if(flag)printf("%s\n","true");
+        else printf("%s\n","false");
     }
     return 0;
 }

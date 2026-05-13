@@ -54,22 +54,25 @@ void kruscal()
             //如果更新根节点，那么这一串点全部都更新了
         }
     }
-    if(cnt<n-1)cout<<"-1"<<endl;
-    else cout<<res<<endl;
+    if(cnt<n-1)printf("%d\n",-1);
+    else printf("%d\n",res);
     // if(cnt==n-1)cout<<res<<endl;
     // else cout<<"impossible"<<endl;
 }
 int main()
 {
     int T;
-    cin>>T;
+    scanf("%d",&T);
     while(T--)
     {
-        cin>>n>>m;
+        scanf("%d%d",&n,&m);
+        //printf("%d\n",-1);
+        //cin>>n>>m;
         for(int i=0;i<m;i++)
         {
             int u,v,w;
-            cin>>u>>v>>w;
+            //cin>>u>>v>>w;
+            scanf("%d%d%d",&u,&v,&w);
             edges[i]={u,v,w};
         }
         //将所有边排序(注意需要自定义比较规则)

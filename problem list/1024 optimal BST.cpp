@@ -39,16 +39,18 @@ double p[N],q[N],w[N][N];
 
 int main()
 {
-    cin>>m;
+    scanf("%d",&m);
+        //printf("%d\n",-1);
+    //cin>>m;
     while(m--)
     {
-        cin>>n;
+        scanf("%d",&n);
         //memset错误，不能初始化doumble，memset(f,0x3f,sizeof f);
         //memset(0x3f)只能用于初始化无穷型int
         
-        for(int i=1;i<=n;i++)cin>>key[i];
-        for(int i=1;i<=n;i++)cin>>p[i];//i号key的概率
-        for(int i=0;i<=n;i++)cin>>q[i];//i号区间的概率
+        for(int i=1;i<=n;i++)scanf("%d",&key[i]);
+        for(int i=1;i<=n;i++)scanf("%lf",&p[i]);//i号key的概率
+        for(int i=0;i<=n;i++)scanf("%lf",&q[i]);//i号区间的概率
         
         for(int i=0;i<=n;i++)w[i][i]=q[i],f[i][i]=0;
         //保证从f[i][i]转移过去，此时只有一个空区间，不含键，len=0
@@ -66,7 +68,8 @@ int main()
                 for(int k=i+1;k<=j;k++)
                     f[i][j]=min(f[i][j],f[i][k-1]+f[k][j]+w[i][j]);
             }
-        cout<<fixed<<setprecision(6)<<f[0][n]<<endl;
+        printf("%.6f\n",f[0][n]);
+       // cout<<fixed<<setprecision(6)<<f[0][n]<<endl;
     }
     return 0;
 }

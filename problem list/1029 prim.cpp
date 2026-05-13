@@ -1,4 +1,5 @@
-
+//prim 0ms，快得多！！！！！！！！！
+//kruskal 20ms
 
 
 //稠密图，邻接矩阵存储
@@ -62,10 +63,12 @@ int prim()
 int main()
 {
     int T;
-    cin>>T;
+    scanf("%d",&T);
+    //cin>>T;
     while(T--)
     {
-        cin>>n>>m;
+        scanf("%d%d",&n,&m);
+        //  printf("%d\n",-1);
         //初始化：
         memset(dist,0x3f,sizeof dist);
         memset(g,0x3f,sizeof g);
@@ -74,12 +77,13 @@ int main()
         while(m--)
         {
             int u,v,w;
-            cin>>u>>v>>w;
+            scanf("%d%d%d",&u,&v,&w);
+            //cin>>u>>v>>w;
             //无向图，重边,自环
             if(u!=v)g[u][v]=g[v][u]=min(g[v][u],w);
         }
         int t=prim();
-        if(t==INF)cout<<"-1\n";
-        else cout<<t<<endl;
+        if(t==INF) printf("%d\n",-1);
+        else  printf("%d\n",t);
     }
 }
