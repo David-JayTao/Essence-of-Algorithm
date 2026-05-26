@@ -1,4 +1,4 @@
-//核心贪心逻辑：
+//v1核心贪心逻辑：
     // 优先处理最紧迫的订单（结束时间最早，按结束时间排序预处理）
     // 对于每个订单：分配给完成时间最早的骑手
 #include<iostream>
@@ -166,34 +166,9 @@ int main()
                 cout << "serve " << oid << '\n';
             }
         }
-        // for(int i = 1; i <= x; i++)
-        // {
-        //     cout << "solution " << i << '\n';
-        //     if(riders[i].seq.empty())
-        //     {
-        //         cout << '\n';
-        //         continue;
-        //     }
-        //     int cur = -1;
-        //     for(int k = 0; k < riders[i].seq.size(); k++)
-        //     {
-        //         int oid = riders[i].seq[k];
-        //         Order& o = orders[oid];
-        //         if(k == 0)
-        //         {
-        //             cur = o.p;
-        //         }
-        //         else
-        //         {
-        //             printGoto(cur, o.p);
-        //             cur = o.p;
-        //         }
-        //         cout << "pick " << oid << '\n';
-        //         printGoto(o.p, o.d);
-        //         cur = o.d;
-        //         cout << "serve " << oid << '\n';
-        //     }
-        // }
+
+        cout<<"\n";//这行空行勿少！
+        
     }
     return 0;
 }
