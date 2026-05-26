@@ -38,7 +38,7 @@ int main()
                 j=ne[j];
             }
         }
-        cout<<res<<endl;
+        cout<<res<<"\n";
     }
     return 0;
 }
