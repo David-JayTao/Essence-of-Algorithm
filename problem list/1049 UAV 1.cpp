@@ -1,8 +1,32 @@
+// YDS算法模板题：
+// 原问题：
+//     有一个 CPU，可以动态调整运行速度。
+//     有很多任务，每个任务有：
+
+//     release time：最早开始时间
+//     deadline：最晚完成时间
+//     work：需要处理的工作量
+
+// CPU 速度越高，功率越大。
+// 要求在所有任务按时完成的前提下，总能耗最小。
+
+
+
 #include <bits/stdc++.h>
 using namespace std;
 
 const int N = 310;
 const double eps = 1e-10;
+
+// 找最大密度区间 [best_l, best_r]
+// ↓
+// 这段速度确定，加入 ans
+// ↓
+// 删除这段区间里的任务
+// ↓
+// 从坐标轴上剪掉 [best_l, best_r]
+// ↓
+// 更新剩余任务坐标
 
 struct Job
 {

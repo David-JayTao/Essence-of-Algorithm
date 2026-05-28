@@ -1,3 +1,6 @@
+//二分图最大匹配：
+//匈牙利算法准则：待字闺中，据为己有；名花有主，求他放手。！！！！！！！！！！！！！！
+
 #include<iostream>
 #include<cstring>
 using namespace std;
